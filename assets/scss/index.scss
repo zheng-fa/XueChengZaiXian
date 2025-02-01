@@ -1,0 +1,379 @@
+// 首页css
+
+// 版心
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+body {
+  background-color: #f3f5f7;
+}
+
+// 头部导航栏
+.header {
+  height: 100px;
+  background-color: #fff;
+
+  .wrapper {
+    padding-top: 30px;
+    display: flex;
+
+    // logo部分
+    .logo {
+      a {
+        display: block;
+        width: 195px;
+        height: 41px;
+        background-image: url(../imges/logo.png);
+        font-size: 0;
+      }
+    }
+
+    // 导航栏部分
+    .nav {
+      margin-left: 102px;
+
+      ul {
+        display: flex;
+        // justify-content: space-between;
+        // width: 245px;
+        // height: 35px;
+
+        li {
+          margin-right: 26px;
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            display: block;
+            padding: 6px 8px;
+            line-height: 27px;
+            font-size: 19px;
+            &:hover {
+              border-bottom: 2px solid #00a4ff;
+            }
+
+            // active 类选择器 表示默认选中的a
+            .active {
+              border-bottom: 2px solid #00a4ff;
+            }
+          }
+        }
+      }
+    }
+
+    // 搜索框
+    .search {
+      display: flex;
+      margin-left: 64px;
+      padding-left: 19px;
+      padding-right: 12px;
+      width: 412px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: #f3f5f7;
+
+      input {
+        flex: 1;
+        border: none;
+        background-color: transparent;
+
+        // 去掉表单控件的焦点框
+        outline: none;
+
+        // &::placeholder 选中的是placeholder的文字样式
+        &::placeholder {
+          font-size: 14px;
+          color: #999;
+        }
+      }
+
+      // 此时父级是flex布局，子集变弹性盒子，宽高生效
+      a {
+        // 侧轴居中
+        align-self: center;
+        width: 16px;
+        height: 16px;
+        background-image: url(../imges/search.png);
+      }
+    }
+
+    // 用户
+    .user {
+      margin-top: 4px;
+      margin-left: 32px;
+
+      img {
+        margin-right: 7px;
+
+        // 行内块和行内垂直对齐方式
+        vertical-align: middle;
+      }
+
+      span {
+        font-size: 16px;
+        color: #666;
+      }
+    }
+  }
+}
+
+// banner 轮播图
+.banner {
+  height: 420px;
+  background-color: #0092cb;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 420px;
+    background-image: url(../uploads/banner.png);
+
+    // 导航栏
+    .left {
+      padding: 3px 20px;
+      width: 190px;
+      height: 420px;
+      background: rgba($color: #000000, $alpha: 0.42);
+
+      ul {
+        li {
+          a {
+            display: block;
+            height: 46px;
+            width: 150px;
+            line-height: 46px;
+            font-size: 16px;
+            color: #fff;
+            &:hover {
+              color: #00a4ff;
+            }
+
+            .fr {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+
+    // 我的课程
+    .right {
+      margin-top: 60px;
+      width: 218px;
+      height: 305px;
+      background-color: #209dd5;
+      border-radius: 10px;
+
+      h3 {
+        margin-left: 14px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 15px;
+        font-weight: 400;
+        color: #fff;
+      }
+
+      .content {
+        padding: 14px;
+        height: 257px;
+        background-color: #fff;
+        border-radius: 10px;
+
+        // 正在学习
+        dl {
+          margin-bottom: 12px;
+          border-bottom: 1px solid #e0e0e0;
+
+          dt {
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+          }
+
+          dd {
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+
+            span {
+              color: #00a4ff;
+            }
+
+            strong {
+              font-weight: 400;
+              color: #7d7d7d;
+            }
+          }
+        }
+
+        .all {
+          display: block;
+          margin-top: 8px;
+          width: 190px;
+          height: 32px;
+          font-size: 14px;
+          text-align: center;
+          line-height: 32px;
+          color: #fff;
+          background-color: #00a4ff;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+}
+
+// 精品推荐
+.recommend {
+  display: flex;
+  margin-top: 12px;
+  padding: 0 20px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(211, 211, 211, 0.5);
+
+  h3 {
+    font-weight: 400;
+    color: #00a4ff;
+  }
+
+  ul {
+    display: flex;
+    // 除去标题和修改兴趣的尺寸，父级剩下的尺寸都给ul，实现把修改兴趣挤到右侧
+    flex: 1;
+
+    li {
+      a {
+        padding: 0 24px;
+        font-size: 18px;
+        border-right: 1px solid #e0e0e0;
+      }
+
+      &:last-child {
+        a {
+          border: none;
+        }
+      }
+    }
+  }
+
+  // 修改兴趣
+  .modify {
+    float: right;
+    font-size: 16px;
+    color: #00a4ff;
+  }
+}
+
+// 精品推荐课程
+.course {
+  margin-top: 15px;
+}
+
+// 标题公共类
+.hd {
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    font-size: 21px;
+    font-weight: 400;
+  }
+
+  .more {
+    font-size: 14px;
+    color: #999;
+  }
+}
+
+// 课程内容
+.bd {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+    li {
+      margin-bottom: 14px;
+      width: 228px;
+      height: 271px;
+
+      .pic {
+        height: 156px;
+      }
+
+      .text {
+        // display: flex;
+        padding: 20px;
+        height: 115px;
+        background-color: #fff;
+
+        h4 {
+          height: 40px;
+          margin-bottom: 13px;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 20px;
+          color: #999;
+
+          span {
+            color: #fa6400;
+          }
+
+          i {
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 前端
+.hd ul {
+  display: flex;
+
+  a {
+    margin: 0 30px;
+    font-size: 16px;
+  }
+
+  .active {
+    color: #00a4ff;
+  }
+}
+
+.bd {
+  display: flex;
+  justify-content: space-between;
+
+  .left {
+    width: 228px;
+  }
+
+  .right {
+    width: 957px;
+
+    .top {
+      margin-bottom: 15px;
+      height: 100px;
+    }
+  }
+}
+
+// 人工智能
+// .ai ul
