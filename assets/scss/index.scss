@@ -413,13 +413,17 @@ body {
     justify-content: space-between;
     width: 516px;
 
-    dt {
-      font-size: 16px;
-    }
+    dl {
+      dt {
+        margin-bottom: 14px;
+        font-size: 16px;
+        line-height: 23px;
+      }
 
-    dd {
-      font-size: 14px;
-      color: #999;
+      dd {
+        font-size: 14px;
+        color: #999;
+      }
     }
   }
 }
