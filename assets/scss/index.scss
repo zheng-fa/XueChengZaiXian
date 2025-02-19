@@ -378,6 +378,48 @@ body {
 // 版权
 .footer {
   margin-top: 60px;
+  padding-top: 60px;
   height: 273px;
   background-color: #fff;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left {
+    width: 440px;
+
+    p {
+      margin-top: 24px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .download {
+      display: block;
+      margin-top: 14px;
+      width: 120px;
+      height: 36px;
+      text-align: center;
+      line-height: 36px;
+      color: #00a4ff;
+      border: 1.5px solid #00a4ff;
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-between;
+    width: 516px;
+
+    dt {
+      font-size: 16px;
+    }
+
+    dd {
+      font-size: 14px;
+      color: #999;
+    }
+  }
 }
